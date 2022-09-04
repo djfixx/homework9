@@ -1,6 +1,5 @@
 package com.homework9;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CinemaHall {
@@ -10,76 +9,69 @@ public class CinemaHall {
     protected boolean[][] seats1330 = new boolean[4][5];
     protected boolean[][] seats1800 = new boolean[4][5];
 
-    public boolean[][] getSeats1000() {
-        return seats1000;
-    }
 
-    public boolean[][] getSeats1330() {
-        return seats1330;
-    }
 
-    public boolean[][] getSeats1800() {
-        return seats1800;
-    }
+
+
 
 
     Scanner input = new Scanner(System.in);
 
     public void setShow() {
 
-        System.out.println("Введите номер сеанса от 1 до 3,  где: 1-й - 10:00, 2-й - 13:30, 3-й - 18:00");
+        System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЃРµР°РЅСЃР° РѕС‚ 1 РґРѕ 3,  РіРґРµ: 1-Р№ - 10:00, 2-Р№ - 13:30, 3-Р№ - 18:00");
         int a = input.nextInt();
 
-        if (a < 1 || a > 3) System.out.println("Вы ввели неправильное число");
+        if (a < 1 || a > 3) System.out.println("Р’С‹ РІРІРµР»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ С‡РёСЃР»Рѕ");
         else if (a == 1) {
-            System.out.println("Вы выбрали сеанс в 10:00");
-            System.out.println("Введите номер желаемого ряда от 0 до 3: ");
+            System.out.println("Р’С‹ РІС‹Р±СЂР°Р»Рё СЃРµР°РЅСЃ РІ 10:00");
+            System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р¶РµР»Р°РµРјРѕРіРѕ СЂСЏРґР° РѕС‚ 0 РґРѕ 3: ");
             int row = input.nextInt();
-            System.out.println("Введите номер желаемого места от 0 до 4: ");
+            System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р¶РµР»Р°РµРјРѕРіРѕ РјРµСЃС‚Р° РѕС‚ 0 РґРѕ 4: ");
             int seat = input.nextInt();
-            if (seats1000[row][seat] == false) {
-                System.out.println("Место свободно. Забронировать? Введите 1, если да, 0 если нет");
+            if (!seats1000[row][seat]) {
+                System.out.println("РњРµСЃС‚Рѕ СЃРІРѕР±РѕРґРЅРѕ. Р—Р°Р±СЂРѕРЅРёСЂРѕРІР°С‚СЊ? Р’РІРµРґРёС‚Рµ 1, РµСЃР»Рё РґР°, 0 РµСЃР»Рё РЅРµС‚");
                 int b = input.nextInt();
-                if (b < 0 || b > 1) System.out.println("Вы ввели неправильное число");
+                if (b < 0 || b > 1) System.out.println("Р’С‹ РІРІРµР»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ С‡РёСЃР»Рѕ");
                 else if (b == 1) {
                     seats1000[row][seat] = true;
-                    System.out.println("Место забронировано");
+                    System.out.println("РњРµСЃС‚Рѕ Р·Р°Р±СЂРѕРЅРёСЂРѕРІР°РЅРѕ");
                 }
-            } else System.out.println("Место занято. Выберите другое место");
+            } else System.out.println("РњРµСЃС‚Рѕ Р·Р°РЅСЏС‚Рѕ. Р’С‹Р±РµСЂРёС‚Рµ РґСЂСѓРіРѕРµ РјРµСЃС‚Рѕ");
 
 
         } else if (a == 2) {
-            System.out.println("Вы выбрали сеанс в 13:30");
-            System.out.println("Введите номер желаемого ряда от 0 до 3: ");
+            System.out.println("Р’С‹ РІС‹Р±СЂР°Р»Рё СЃРµР°РЅСЃ РІ 13:30");
+            System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р¶РµР»Р°РµРјРѕРіРѕ СЂСЏРґР° РѕС‚ 0 РґРѕ 3: ");
             int row = input.nextInt();
-            System.out.println("Введите номер желаемого места от 0 до 4: ");
+            System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р¶РµР»Р°РµРјРѕРіРѕ РјРµСЃС‚Р° РѕС‚ 0 РґРѕ 4: ");
             int seat = input.nextInt();
-            if (seats1330[row][seat] == false) {
-                System.out.println("Место свободно. Забронировать? Введите 1, если да, 0 если нет");
+            if (!seats1330[row][seat]) {
+                System.out.println("РњРµСЃС‚Рѕ СЃРІРѕР±РѕРґРЅРѕ. Р—Р°Р±СЂРѕРЅРёСЂРѕРІР°С‚СЊ? Р’РІРµРґРёС‚Рµ 1, РµСЃР»Рё РґР°, 0 РµСЃР»Рё РЅРµС‚");
                 int b = input.nextInt();
-                if (b < 0 || b > 1) System.out.println("Вы ввели неправильное число");
+                if (b < 0 || b > 1) System.out.println("Р’С‹ РІРІРµР»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ С‡РёСЃР»Рѕ");
                 else if (b == 1) {
                     seats1330[row][seat] = true;
-                    System.out.println("Место забронировано");
+                    System.out.println("РњРµСЃС‚Рѕ Р·Р°Р±СЂРѕРЅРёСЂРѕРІР°РЅРѕ");
                 }
-            } else System.out.println("Место занято. Выберите другое место");
+            } else System.out.println("РњРµСЃС‚Рѕ Р·Р°РЅСЏС‚Рѕ. Р’С‹Р±РµСЂРёС‚Рµ РґСЂСѓРіРѕРµ РјРµСЃС‚Рѕ");
 
 
         } else {
-            System.out.println("Вы выбрали сеанс в 18:00");
-            System.out.println("Введите номер желаемого ряда от 0 до 3: ");
+            System.out.println("Р’С‹ РІС‹Р±СЂР°Р»Рё СЃРµР°РЅСЃ РІ 18:00");
+            System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р¶РµР»Р°РµРјРѕРіРѕ СЂСЏРґР° РѕС‚ 0 РґРѕ 3: ");
             int row = input.nextInt();
-            System.out.println("Введите номер желаемого места от 0 до 4: ");
+            System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р¶РµР»Р°РµРјРѕРіРѕ РјРµСЃС‚Р° РѕС‚ 0 РґРѕ 4: ");
             int seat = input.nextInt();
-            if (seats1800[row][seat] == false) {
-                System.out.println("Место свободно. Забронировать? Введите 1, если да, 0 если нет");
+            if (!seats1800[row][seat]) {
+                System.out.println("РњРµСЃС‚Рѕ СЃРІРѕР±РѕРґРЅРѕ. Р—Р°Р±СЂРѕРЅРёСЂРѕРІР°С‚СЊ? Р’РІРµРґРёС‚Рµ 1, РµСЃР»Рё РґР°, 0 РµСЃР»Рё РЅРµС‚");
                 int b = input.nextInt();
-                if (b < 0 || b > 1) System.out.println("Вы ввели неправильное число");
+                if (b < 0 || b > 1) System.out.println("Р’С‹ РІРІРµР»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ С‡РёСЃР»Рѕ");
                 else if (b == 1) {
                     seats1800[row][seat] = true;
-                    System.out.println("Место забронировано");
+                    System.out.println("РњРµСЃС‚Рѕ Р·Р°Р±СЂРѕРЅРёСЂРѕРІР°РЅРѕ");
                 }
-            } else System.out.println("Место занято. Выберите другое место");
+            } else System.out.println("РњРµСЃС‚Рѕ Р·Р°РЅСЏС‚Рѕ. Р’С‹Р±РµСЂРёС‚Рµ РґСЂСѓРіРѕРµ РјРµСЃС‚Рѕ");
 
         }
     }

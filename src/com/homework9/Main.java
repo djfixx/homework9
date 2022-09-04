@@ -1,31 +1,30 @@
 package com.homework9;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        StandartHall standartHall = new StandartHall("Стандарт", true, false);
+        StandartHall standartHall = new StandartHall("РЎС‚Р°РЅРґР°СЂС‚", true, false);
         Hall3d hall3d = new Hall3d("3D", true, true, true);
         HallVip hallVip = new HallVip("VIP", true, true, true, true);
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Введите номер зала от 1 до 3, где: 1 - Стандарт, 2 - 3D, 3 - VIP");
+        System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р·Р°Р»Р° РѕС‚ 1 РґРѕ 3, РіРґРµ: 1 - РЎС‚Р°РЅРґР°СЂС‚, 2 - 3D, 3 - VIP");
         int a = input.nextInt();
 
-        if (a < 1 || a > 3) System.out.println("Вы ввели неправильное число");
+        if (a < 1 || a > 3) System.out.println("Р’С‹ РІРІРµР»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ С‡РёСЃР»Рѕ");
         else if (a == 1) {
-            System.out.println("Вы выбрали зал - Стандарт");
+            System.out.println("Р’С‹ РІС‹Р±СЂР°Р»Рё Р·Р°Р» - РЎС‚Р°РЅРґР°СЂС‚");
             standartHall.setShow();
 
         } else if (a == 2) {
-            System.out.println("вы выбрали зал - 3D");
+            System.out.println("РІС‹ РІС‹Р±СЂР°Р»Рё Р·Р°Р» - 3D");
             hall3d.setShow();
         } else {
-            System.out.println("Вы выбрали зал - VIP");
+            System.out.println("Р’С‹ РІС‹Р±СЂР°Р»Рё Р·Р°Р» - VIP");
             hallVip.setShow();
         }
-
+        System.out.println();
     }
 }
