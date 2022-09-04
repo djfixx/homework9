@@ -10,11 +10,6 @@ public class CinemaHall {
     protected boolean[][] seats1800 = new boolean[4][5];
 
 
-
-
-
-
-
     Scanner input = new Scanner(System.in);
 
     public void setShow() {
@@ -74,12 +69,29 @@ public class CinemaHall {
             } else System.out.println("Место занято. Выберите другое место");
 
         }
+
     }
+
+    public void setFreeShow() {
+        System.out.println("Подобрать билет на ближайший сеанс? Если да - введите 1, нет - 0");
+        int a = input.nextInt();
+        if (a < 0 || a > 1) System.out.println("Вы ввели неправильное число");
+        if (a == 1) {
+            for (int i = 0; i < seats1000.length; i++) {
+                for (int j = 0; j < seats1000[i].length; j++) {
+                    if (seats1000[i][j] == false) {
+                        seats1000[i][j] = true;
+                        System.out.println("Забронировано место на сеанс в 10:00, ряд " + i + " место " + j);
+                        break;
+                    }
+                }
+            }
+
+        }
+
+    }
+
 }
-
-
-
-
 
 
 

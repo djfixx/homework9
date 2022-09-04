@@ -25,6 +25,6 @@ public class Main {
             System.out.println("Вы выбрали зал - VIP");
             hallVip.setShow();
         }
-        System.out.println();
+    standartHall.setFreeShow();
     }
 }
