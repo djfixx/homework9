@@ -8,6 +8,9 @@ public class Main {
         Hall3d hall3d = new Hall3d("3D", true, true, true);
         HallVip hallVip = new HallVip("VIP", true, true, true, true);
 
+        Cinema ironMan = new Cinema("Железный человек", "Фантастика", 2008);
+       ironMan.setShow(ironMan.setHall());
+
 
 
 
