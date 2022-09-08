@@ -1,9 +1,9 @@
 package com.homework9;
 
-public class Cinema extends CinemaHall{
+public class Cinema extends CinemaHall {
     protected String name;
-     protected String genre;
-      int year;
+    protected String genre;
+    int year;
 
     public Cinema(String name, String genre, int year) {
         this.name = name;

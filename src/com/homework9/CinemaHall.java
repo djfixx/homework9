@@ -1,22 +1,10 @@
 package com.homework9;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CinemaHall {
     protected String hallName;
     protected boolean surroundSound;
-
-
-
-
-   //
-
-
-  //
-
-
-
 
 
     Scanner input = new Scanner(System.in);
@@ -38,6 +26,7 @@ public class CinemaHall {
         } else System.out.println("Место занято. Выберите другое место");
         return seats;
     }
+
     public int setHall() {
 
         System.out.println("Введите номер зала от 1 до 3, где: 1 - Стандарт, 2 - 3D, 3 - VIP");
@@ -61,7 +50,7 @@ public class CinemaHall {
 
         System.out.println("Введите номер сеанса от 1 до 3,  где: 1-й - 10:00, 2-й - 13:30, 3-й - 18:00");
         int a = input.nextInt();
-        if(a == 1) System.out.println("Вы выбрали сеанс в 10:00");
+        if (a == 1) System.out.println("Вы выбрали сеанс в 10:00");
         else if (a == 2) System.out.println("Вы выбрали сеанс в 13:30");
         else System.out.println("Вы выбрали сеанс в 18:00");
 
@@ -81,28 +70,52 @@ public class CinemaHall {
     }
 
     public void setFreeShow() {
+        Seats seat = new Seats();
         System.out.println("Подобрать билет на ближайший сеанс? Если да - введите 1, нет - 0");
         int a = input.nextInt();
         if (a < 0 || a > 1) System.out.println("Вы ввели неправильное число");
-        //if (a == 1) finder();
 
-
-    }
-
-
-    public void finder(boolean[][] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                if (arr[i][j] == false) {
-                    arr[i][j] = true;
-                    System.out.println("Забронировано место на сеанс в 10:00, ряд " + i + " место " + j);
-                    break;
-
-                }
-            }
+        for (int i = 1; i < 2; i++) {
+            finder(seat.getSeats10st());
+            if (finder(seat.getSeats10st())) break;
+            finder(seat.getSeats103d());
+            if (finder(seat.getSeats103d())) break;
+            finder(seat.getSeats10vip());
+            if (finder(seat.getSeats10vip())) break;
+            finder(seat.getSeats13st());
+            if (finder(seat.getSeats13st())) break;
+            finder(seat.getSeats133d());
+            if (finder(seat.getSeats133d())) break;
+            finder(seat.getSeats13vip());
+            if (finder(seat.getSeats13vip())) break;
+            finder(seat.getSeats18st());
+            if (finder(seat.getSeats18st())) break;
+            finder(seat.getSeats18st());
+            if (finder(seat.getSeats183d())) break;
+            finder(seat.getSeats18vip());
+            if (finder(seat.getSeats18vip())) break;
         }
     }
+
+    public boolean finder(boolean[][] arr) {
+        boolean f = false;
+        int i = 0;
+        while (i < arr.length) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (!arr[i][j]) {
+                    arr[i][j] = true;
+                    f = true;
+                    break;
+                }
+                System.out.println("Забронировано место на сеанс в 10:00, место " + i + " ряд " + j);
+            }
+            break;
+
+        }
+        return f;
+    }
 }
+
 
 
 

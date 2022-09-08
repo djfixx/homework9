@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62481cc6-a07f-433a-8a48-a6e7f2f64245" name="Changes" comment="4">
+    <list default="true" id="62481cc6-a07f-433a-8a48-a6e7f2f64245" name="Changes" comment="5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/homework9/Cinema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/homework9/Cinema.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/homework9/CinemaHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/homework9/CinemaHall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/homework9/Hall3d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/homework9/Hall3d.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/homework9/HallVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/homework9/HallVip.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/homework9/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/homework9/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/homework9/StandartHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/homework9/StandartHall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/homework9/Seats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/homework9/Seats.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +117,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662476872896</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="5">
+      <created>1662489536486</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662489536486</updated>
+    </task>
+    <task id="LOCAL-00006" summary="5">
+      <created>1662489689307</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662489689307</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +150,7 @@
     <MESSAGE value="2" />
     <MESSAGE value="3" />
     <MESSAGE value="4" />
-    <option name="LAST_COMMIT_MESSAGE" value="4" />
+    <MESSAGE value="5" />
+    <option name="LAST_COMMIT_MESSAGE" value="5" />
   </component>
 </project>

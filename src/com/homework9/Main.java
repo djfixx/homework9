@@ -1,7 +1,4 @@
 package com.homework9;
-
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         StandartHall standartHall = new StandartHall("Стандарт", true, false);
@@ -9,15 +6,8 @@ public class Main {
         HallVip hallVip = new HallVip("VIP", true, true, true, true);
 
         Cinema ironMan = new Cinema("Железный человек", "Фантастика", 2008);
-       ironMan.setShow(ironMan.setHall());
 
-
-
-
-
-
-
-
-
+        ironMan.setShow(ironMan.setHall());
+        ironMan.setFreeShow();
     }
 }
