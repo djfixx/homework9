@@ -1,6 +1,6 @@
 package com.homework9;
 
-public class Seats extends CinemaHall {
+public class Seats {
     protected boolean[][] seats10st = new boolean[4][5];
     protected boolean[][] seats13st = new boolean[4][5];
     protected boolean[][] seats18st = new boolean[4][5];
